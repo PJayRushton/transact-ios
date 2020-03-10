@@ -19,6 +19,7 @@ struct AtomicTransactView: UIViewRepresentable {
         let uiView = AtomicWebView()
         uiView.configuration.userContentController.add(transactEventController, name: "atomic-transact-close")
         uiView.configuration.userContentController.add(transactEventController, name: "atomic-transact-finish")
+        uiView.configuration.userContentController.add(transactEventController, name: "atomic-transact-open-url")
         return uiView
     }
     

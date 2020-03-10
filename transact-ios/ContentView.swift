@@ -18,12 +18,11 @@ struct ContentView: View {
         {
             Color(atomicBlue)
                 .edgesIgnoringSafeArea(.all)
-            VStack(alignment: .center, spacing: -10) {
+            VStack(alignment: .center, spacing: -15) {
                 Image("atomic-logo")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200.0, height: 200.0)
-                Divider()
                 Button(action: {
                     self.showingTransact = true
                     }) {
@@ -41,10 +40,14 @@ struct ContentView: View {
     }
     
     // Handle postMessage events from Transact
-    func eventHandler(_ event: String) {
+    func eventHandler(_ event: String, payload: NSDictionary) {
         switch event {
         case "atomic-transact-close", "atomic-transact-finish":
             showingTransact = false
+        case "atomic-transact-open-url":
+            if let url = URL(string: payload.object(forKey: "url") as! String) {
+                UIApplication.shared.open(url)
+            }
         default:
             print("Unrecognized event: '\(event)'")
         }
