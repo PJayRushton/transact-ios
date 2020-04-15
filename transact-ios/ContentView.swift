@@ -18,12 +18,11 @@ struct ContentView: View {
         {
             Color(atomicBlue)
                 .edgesIgnoringSafeArea(.all)
-            VStack(alignment: .center, spacing: -10) {
+            VStack(alignment: .center, spacing: -15) {
                 Image("atomic-logo")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200.0, height: 200.0)
-                Divider()
                 Button(action: {
                     self.showingTransact = true
                     }) {
@@ -34,17 +33,21 @@ struct ContentView: View {
                         .border(Color(.white), width: 3)
                 }.sheet(isPresented: $showingTransact, content: {
                     // Configure Transact SDK with this call. For example, set a publicToken
-                    AtomicTransactView(request: URLRequest(url: URL(string: atomicHelper.generateUrl(product: "deposit", demoMode: true, publicToken: ""))!), isPresented: self.$showingTransact, transactEventController: AtomicTransactEventController(eventHandler: self.eventHandler)).edgesIgnoringSafeArea(.all)
+                    AtomicTransactView(request: URLRequest(url: URL(string: atomicHelper.generateUrl(product: "deposit", demoMode: true, publicToken: "", color: "#4B39EF"))!), isPresented: self.$showingTransact, transactEventController: AtomicTransactEventController(eventHandler: self.eventHandler)).edgesIgnoringSafeArea(.all)
                         })
             }
         }
     }
     
     // Handle postMessage events from Transact
-    func eventHandler(_ event: String) {
+    func eventHandler(_ event: String, payload: NSDictionary) {
         switch event {
         case "atomic-transact-close", "atomic-transact-finish":
             showingTransact = false
+        case "atomic-transact-open-url":
+            if let url = URL(string: payload.object(forKey: "url") as! String) {
+                UIApplication.shared.open(url)
+            }
         default:
             print("Unrecognized event: '\(event)'")
         }

@@ -10,11 +10,12 @@ import Foundation
 import WebKit
 
 class AtomicTransactEventController: NSObject, WKScriptMessageHandler {
-    var eventHandler: (_ event: String) -> Void
-    init(eventHandler: @escaping (String) -> Void) {
+    var eventHandler: (_ event: String,_ payload: NSDictionary) -> Void
+    init(eventHandler: @escaping (String, NSDictionary) -> Void) {
         self.eventHandler = eventHandler
     }
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        eventHandler(message.name)
+        print("got '\(message.name)' event: \(message.body)")
+        eventHandler(message.name, message.body as! NSDictionary)
     }
 }

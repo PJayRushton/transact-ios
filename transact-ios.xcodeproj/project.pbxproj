@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D2A8D68B2411B2E500928F4F /* transact-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "transact-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2A8D68B2411B2E500928F4F /* Transact Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transact Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A8D68E2411B2E500928F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2A8D6902411B2E500928F4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D2A8D6922411B2E500928F4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		D2A8D68C2411B2E500928F4F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2A8D68B2411B2E500928F4F /* transact-ios.app */,
+				D2A8D68B2411B2E500928F4F /* Transact Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,7 +104,7 @@
 			);
 			name = "transact-ios";
 			productName = "transact-ios";
-			productReference = D2A8D68B2411B2E500928F4F /* transact-ios.app */;
+			productReference = D2A8D68B2411B2E500928F4F /* Transact Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -302,15 +302,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"transact-ios/Preview Content\"";
-				DEVELOPMENT_TEAM = WVMUNRJEDY;
+				DEVELOPMENT_TEAM = 8XQFBA3VH8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "transact-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.atomic.transact-ios.transact-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atomic.transact;
+				PRODUCT_NAME = "Transact Demo";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -322,15 +322,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"transact-ios/Preview Content\"";
-				DEVELOPMENT_TEAM = WVMUNRJEDY;
+				DEVELOPMENT_TEAM = 8XQFBA3VH8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "transact-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.atomic.transact-ios.transact-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atomic.transact;
+				PRODUCT_NAME = "Transact Demo";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
