@@ -16,6 +16,11 @@ class AtomicTransactEventController: NSObject, WKScriptMessageHandler {
     }
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         print("got '\(message.name)' event: \(message.body)")
-        eventHandler(message.name, message.body as! NSDictionary)
+        if let messageBody = message.body as? NSDictionary {
+            eventHandler(message.name, messageBody)
+        } else {
+            let emptyDictionary: NSDictionary = NSDictionary()
+            eventHandler(message.name, emptyDictionary)
+        }
     }
 }
