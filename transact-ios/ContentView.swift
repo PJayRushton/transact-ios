@@ -33,7 +33,7 @@ struct ContentView: View {
                         .border(Color(.white), width: 3)
                 }.sheet(isPresented: $showingTransact, content: {
                     // Configure Transact SDK with this call. For example, set a publicToken
-                    AtomicTransactView(request: URLRequest(url: URL(string: atomicHelper.generateUrl(product: "deposit", demoMode: true, publicToken: "", theme: { brandColor:"#1b1464"}))!), isPresented: self.$showingTransact, transactEventController: AtomicTransactEventController(eventHandler: self.eventHandler)).edgesIgnoringSafeArea(.all)
+                    AtomicTransactView(request: URLRequest(url: URL(string: atomicHelper.generateUrl(product: "deposit", demoMode: false,publicToken: "PUBLIC_TOKEN_HERE",color:"" ))!), isPresented: self.$showingTransact, transactEventController: AtomicTransactEventController(eventHandler: self.eventHandler)).edgesIgnoringSafeArea(.all)
                         })
             }
         }
