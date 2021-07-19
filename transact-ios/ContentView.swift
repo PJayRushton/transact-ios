@@ -48,6 +48,8 @@ struct ContentView: View {
             if let url = URL(string: payload.object(forKey: "url") as! String) {
                 UIApplication.shared.open(url)
             }
+        case "atomic-transact-interaction":
+            print("Interaction event: '\(event)'")
         default:
             print("Unrecognized event: '\(event)'")
         }

@@ -20,6 +20,7 @@ struct AtomicTransactView: UIViewRepresentable {
         uiView.configuration.userContentController.add(transactEventController, name: "atomic-transact-close")
         uiView.configuration.userContentController.add(transactEventController, name: "atomic-transact-finish")
         uiView.configuration.userContentController.add(transactEventController, name: "atomic-transact-open-url")
+        uiView.configuration.userContentController.add(transactEventController, name: "atomic-transact-interaction")
         return uiView
     }
     
