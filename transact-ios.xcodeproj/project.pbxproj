@@ -15,7 +15,6 @@
 		D2A8D69B2411B2E700928F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A8D6992411B2E700928F4F /* LaunchScreen.storyboard */; };
 		D2A8D6A32411B31700928F4F /* AtomicWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8D6A22411B31700928F4F /* AtomicWebView.swift */; };
 		D2A8D6A72411C7A700928F4F /* AtomicTransactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8D6A62411C7A700928F4F /* AtomicTransactView.swift */; };
-		D2A8D6D124120CE300928F4F /* AtomicTransactEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8D6D024120CE300928F4F /* AtomicTransactEventController.swift */; };
 		D2A8D6D32412D76600928F4F /* AtomicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8D6D22412D76600928F4F /* AtomicHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		D2A8D69C2411B2E700928F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2A8D6A22411B31700928F4F /* AtomicWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicWebView.swift; sourceTree = "<group>"; };
 		D2A8D6A62411C7A700928F4F /* AtomicTransactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicTransactView.swift; sourceTree = "<group>"; };
-		D2A8D6D024120CE300928F4F /* AtomicTransactEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicTransactEventController.swift; sourceTree = "<group>"; };
 		D2A8D6D22412D76600928F4F /* AtomicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +65,6 @@
 				D2A8D6A62411C7A700928F4F /* AtomicTransactView.swift */,
 				D2A8D6A22411B31700928F4F /* AtomicWebView.swift */,
 				D2A8D6D22412D76600928F4F /* AtomicHelper.swift */,
-				D2A8D6D024120CE300928F4F /* AtomicTransactEventController.swift */,
 				D2A8D6922411B2E500928F4F /* ContentView.swift */,
 				D2A8D68E2411B2E500928F4F /* AppDelegate.swift */,
 				D2A8D6902411B2E500928F4F /* SceneDelegate.swift */,
@@ -159,7 +156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2A8D68F2411B2E500928F4F /* AppDelegate.swift in Sources */,
-				D2A8D6D124120CE300928F4F /* AtomicTransactEventController.swift in Sources */,
 				D2A8D6A32411B31700928F4F /* AtomicWebView.swift in Sources */,
 				D2A8D6D32412D76600928F4F /* AtomicHelper.swift in Sources */,
 				D2A8D6912411B2E500928F4F /* SceneDelegate.swift in Sources */,
